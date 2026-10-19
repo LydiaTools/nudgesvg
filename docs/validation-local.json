@@ -1,0 +1,29 @@
+{
+  "captured_at": "2026-10-19T20:33:03.765Z",
+  "browser": "155.0.8059.84",
+  "channel": "chrome",
+  "checks": [
+    "Practice SVG: real selection, move, source export and before/after screenshots.",
+    "Unedited file download preserves UTF-8 BOM, CRLF, comments, quotes and bytes.",
+    "Rotated/scaled parent: root-coordinate move is exactly +3, −2; receipt reconstructs only the touched range.",
+    "Out-of-range move rejected without modifying the file.",
+    "Escaped text, undo/redo and original comparison keep edits intact.",
+    "Actual pointer drag and keyboard nudge work in nested transforms.",
+    "Real PNG download is 1200 × 960 and contains rendered image data.",
+    "Seven active/external/encoding inputs rejected before replacing the current document.",
+    "English/Chinese controls and fresh 390 px mobile layout; preview zoom works without page overflow.",
+    "Direct file:// app opening, edit and SVG export work without a server."
+  ],
+  "external_http_requests": [],
+  "page_errors": [],
+  "scope": "Original synthetic SVG files only; local and file:// browser QA, not external-user adoption.",
+  "source_sha256": {
+    "app/index.html": "0445392dbf5f5d61fc5b50297c18424339adcb9c3d02b89cecf86992cbd45f89",
+    "app/styles.css": "931ea2c1bf1174b5e58883be485a4c349875b659164fe9e0c17f9b4754450cd4",
+    "app/core.js": "0aad9b6f9366ee8dd9c9b8680ba4ef08e236db5191266a26ba72191b7323bd31",
+    "app/app.js": "3c7e11eb7619641d761b2284626d50cb6466bd01be0cf3a87d77b4f2bb52294d",
+    "tests/browser.cjs": "745a1eff438c3279c09f22d532599b62e3ed05e742f7cb411cb6e2a3b770e03f",
+    "tests/core.test.js": "b35151c60bfb6d1db7ea469d27f110b2062c9613c909611ab9f063c95a1d6ade",
+    "scripts/serve.cjs": "4b56fdef1187aede4b5d2e4cf813daed827966b3ea49674efa46569711fa142d"
+  }
+}

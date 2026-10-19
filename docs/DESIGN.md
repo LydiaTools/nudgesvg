@@ -1,0 +1,11 @@
+# NudgeSVG design and acceptance brief
+
+The user is a creator or developer with an existing static SVG from an agent or a diagram tool. They need one label or object adjusted, without another prompt round or a full drawing workflow. Open, choose, adjust, review, download is the primary sequence. Original and changed source must remain inspectable.
+
+This is a demand hypothesis, not verified adoption. The editing-friction example is Anatomy issue #124, whose contributor already built a figure-specific editor. That editor and interactive 3D/WebGL pages are not our implementation or supported input. We independently implement a focused static-SVG patcher. SVG-Edit and Method Draw remain more capable drawing tools; no claim of being the first SVG editor.
+
+Visual concept: a compact drafting bench, with a broad pale-blue workspace, white artwork, navy tools and a yellow selection tab. The actual SVG is the main visual, not a decorative hero. Base #F7FAFD, workspace #E8EFF6, ink #173048, blue #2767A7, selection #FFE18C, border #CAD7E3. Avenir Next / Trebuchet MS for interface text, Georgia only for the short opening sentence; platform fonts keep offline rendering possible. A narrow element list, broad canvas and focused adjustment rail collapse into a single-column mobile sequence.
+
+Reference inspected: actual https://editor.method.ac/ UI on 2026-10-20. Its drawing toolbar, blank canvas and full properties demonstrate the broader task. We use a task-specific import-and-adjust sequence and an edit receipt, without copying assets, branding or implementation. The private reference screenshot is not a public product asset.
+
+Acceptance: edit original static SVG; move in root drawing coordinates even inside a rotated parent; change plain text; undo/redo; review touched source ranges; export edited SVG, PNG and a change JSON. Unedited source characters must remain identical, not reserialized. Browser validation must cover actual downloads, nested transforms, text escaping, hostile inputs, English/Chinese, mobile, offline file opening and zero external requests. No account, AI service or analytics. Unsupported active/external content must be rejected, not silently removed or declared safe. Exports are ordinary SVG/PNG; this does not edit PNG text or animated pages.
