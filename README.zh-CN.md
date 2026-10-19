@@ -6,7 +6,9 @@
 
 [在线打开](https://lydiatools.github.io/nudgesvg/?lang=zh) · [English](README.md) · [下载离线包](https://github.com/LydiaTools/nudgesvg/releases/tag/v0.1.0)
 
-![真实中文版界面：选择图形、调整位置、查看改动记录](docs/assets/editor-zh.png)
+![真实中文版操作：选中 Review copy、向右移动、对照原图、核对源码改动、下载 SVG](docs/assets/editor-demo-zh.gif)
+
+真实界面录屏：把 **Review copy** 向右移 `40` 个 SVG 单位，对照原图，核对唯一一处源码范围改动，再下载 SVG。[查看静态截图](docs/assets/editor-zh.png)。
 
 图已经很接近了，偏偏一个标签靠左了一点。你可以继续解释，也可以直接把它挪到合适的位置。
 

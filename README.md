@@ -6,7 +6,9 @@ Move a label. Fix a few words. Keep the rest of your SVG source exactly as it wa
 
 [Open the editor](https://lydiatools.github.io/nudgesvg/) · [中文](README.zh-CN.md) · [Download the offline kit](https://github.com/LydiaTools/nudgesvg/releases/tag/v0.1.0)
 
-![Actual editor: the Review copy label has moved and the changed transform appears in the source receipt](docs/assets/editor-en.png)
+![Actual NudgeSVG workflow: select Review copy, move it right, compare the original, inspect the changed source and download SVG](docs/assets/editor-demo-en.gif)
+
+Real editor capture: move **Review copy** by `+40` SVG units, compare the original, inspect the one changed source range, then download SVG. [Still screenshot](docs/assets/editor-en.png).
 
 The drawing is almost right. The label is a little too far left. Another prompt might fix it—or move something else you liked.
 
