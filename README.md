@@ -24,6 +24,8 @@ I wanted a small finishing tool: open a static SVG, point at the thing, make the
 
 For your own drawing, choose **Open SVG** or paste its markup below the editor. Nothing is sent to an AI service. An image flattened to PNG does not contain editable SVG labels.
 
+**Already generating diagrams?** [Finish a label in a Pele SVG](docs/PELE.md): a pinned renderer, downloadable before/after files, and a one-range change record. The garden example uses Pele 1.7.0; it is a manual finishing workflow.
+
 ## What's different about this little tool?
 
 - **Source-range edits.** Only the chosen text content or `transform` attribute is replaced. The SVG download is not passed through an XML serializer. Unedited characters, comments, quotes and line endings stay in place.
@@ -76,7 +78,8 @@ The public discussion in Anatomy [#124](https://github.com/wheresryan22/anatomy/
 
 ```sh
 npm test                       # Node built-ins; 7 source-range tests
-npm ci                         # Browser-test dependency only
+npm ci                         # Development dependencies only
+npm run test:pele               # Reproduce the pinned Pele example
 npx playwright install chromium
 BROWSER_CHANNEL=chromium npm run test:browser
 ```
@@ -87,4 +90,4 @@ Browser checks use original synthetic drawings, actual file/PNG/JSON downloads, 
 
 If it helps you finish one of those almost-right diagrams, a Star is a useful way to keep it for the next one.
 
-MIT © LydiaTools. No third-party runtime code is bundled; Playwright is an Apache-2.0 development dependency. [Third-party notes](THIRD_PARTY.md)
+MIT © LydiaTools. The editor's four application files use no third-party libraries. Playwright (Apache-2.0) and the example renderer Pele (MIT) are development dependencies; generated SVG examples retain Pele's notice. [Third-party notes](THIRD_PARTY.md)

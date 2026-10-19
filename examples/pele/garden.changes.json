@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "tool": "NudgeSVG",
+  "input": {
+    "name": "garden.original.svg",
+    "sha256": "db1cade43fef3b506fa9a8005e3f082b9444469b7fe5575810de22e9af65e5b1"
+  },
+  "output": {
+    "sha256": "e76ceb44f6eb4ca5a3f814d806de972a227a1f0fac7b7c9052173edb131abc5c"
+  },
+  "coordinate_system": "Source ranges use JavaScript UTF-16 code-unit offsets; before/after are literal source fragments.",
+  "changes": [
+    {
+      "node": 30,
+      "tag": "text",
+      "kind": "attribute",
+      "attribute": "transform",
+      "start": 2907,
+      "end": 2907,
+      "before": "",
+      "after": " transform=\"translate(20 64)\""
+    }
+  ]
+}

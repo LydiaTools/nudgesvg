@@ -103,13 +103,62 @@ async function main() {
       "Practice SVG: real selection, move, source export and before/after screenshots.",
     );
 
+    const peleFolder = path.join(root, "examples", "pele");
+    const peleSource = await fs.readFile(
+      path.join(peleFolder, "garden.original.svg"),
+    );
     await page
       .locator("#svgFile")
-      .setInputFiles({
-        name: "nested-中文.svg",
-        mimeType: "image/svg+xml",
-        buffer: Buffer.from(source),
-      });
+      .setInputFiles(path.join(peleFolder, "garden.original.svg"));
+    await page
+      .locator("#filename")
+      .filter({ hasText: "garden.original.svg" })
+      .waitFor();
+    assert.equal(await page.locator("#error").isVisible(), false);
+    assert.deepEqual((await download("#exportSvg")).bytes, peleSource);
+    const pelePoints = () =>
+      page
+        .frameLocator("#preview")
+        .locator("circle")
+        .evaluateAll((nodes) =>
+          nodes.map((el) => [
+            el.getAttribute("cx"),
+            el.getAttribute("cy"),
+            el.getAttribute("r"),
+          ]),
+        );
+    const originalPoints = await pelePoints();
+    await page
+      .getByRole("button", {
+        name: "Replace stepping stones text",
+        exact: true,
+      })
+      .click();
+    await page.locator("#moveX").fill("20");
+    await page.locator("#moveY").fill("64");
+    await page.locator("#moveApply").click();
+    const peleEdited = await download("#exportSvg");
+    assert.deepEqual(
+      peleEdited.bytes,
+      await fs.readFile(path.join(peleFolder, "garden.adjusted.svg")),
+    );
+    assert.deepEqual(await pelePoints(), originalPoints);
+    const peleChanges = JSON.parse((await download("#exportChanges")).bytes);
+    assert.equal(peleChanges.changes.length, 1);
+    assert.equal(peleChanges.input.sha256, digest(peleSource));
+    assert.equal(peleChanges.output.sha256, digest(peleEdited.bytes));
+    const pelePng = (await download("#exportPng")).bytes;
+    assert.equal(pelePng.readUInt32BE(16), 1200);
+    assert.equal(pelePng.readUInt32BE(20), 1200);
+    checks.push(
+      "Pele 1.7.0 example: exact unedited download, one label move matching the committed SVG, unchanged data points, one source range and a 1200×1200 PNG.",
+    );
+
+    await page.locator("#svgFile").setInputFiles({
+      name: "nested-中文.svg",
+      mimeType: "image/svg+xml",
+      buffer: Buffer.from(source),
+    });
     await page
       .locator("#filename")
       .filter({ hasText: "nested-中文.svg" })
@@ -335,7 +384,7 @@ async function main() {
       page_errors: failures,
       screenshots: shots,
       scope:
-        "Original synthetic SVG files only; local and file:// browser QA, not external-user adoption.",
+        "Synthetic SVG fixtures, including a Pele-rendered original garden example; local and file:// browser QA, not external-user adoption.",
     };
     await fs.writeFile(
       path.join(output, "result.json"),

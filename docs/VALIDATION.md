@@ -23,6 +23,10 @@ Seven Node built-in tests cover unchanged source (UTF-8 BOM, CRLF, comments, quo
 
 The test server binds only to loopback and serves four application files. Both it and the browser close in `finally`. No persistent service is installed.
 
+## Pele example on current main
+
+`npm run test:pele` rerenders the original garden input using the locked Pele 1.7.0 development dependency and requires exact equality with the committed SVG. The browser suite adds an eleventh workflow group: import that SVG unchanged, move one label by +20/+64, require the complete download to match the committed adjusted file, preserve all data-point attributes, verify one changed range and both hashes, and download a 1200×1200 PNG. The four editor runtime files are unchanged. The extra example is on main; the v0.1.0 release ZIP is not replaced.
+
 ## Interpretation and limits
 
 Positions are SVG drawing units, independent of preview zoom. At 1:1 output they can correspond to pixels; a root-unit move is not a constant number of physical screen pixels at every zoom. The original source and result stay separate; screenshot selection outlines belong to the editor and do not appear in exported artwork.

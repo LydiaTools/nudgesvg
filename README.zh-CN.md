@@ -24,6 +24,8 @@
 
 自己的图可通过“打开 SVG”或粘贴源码载入。PNG 已经是位图，不能用此工具修改里面的文字。
 
+**已经用工具生成图了？** [试试 Pele SVG 标签微调](docs/PELE.zh-CN.md)：固定渲染版本、可下载的调整前后文件，以及只改一处源码的记录。园艺示例使用 Pele 1.7.0，演示生成后的手动收尾流程。
+
 ## 这个小工具的重点
 
 - **只修改对应源码范围。** 替换选中文字或 `transform` 属性，不把整份 SVG 重新序列化；未改动的字符、注释、引号和换行保留。
@@ -71,6 +73,7 @@ Anatomy [#124](https://github.com/wheresryan22/anatomy/issues/124) 的公开讨�
 ```sh
 npm test
 npm ci
+npm run test:pele
 npx playwright install chromium
 BROWSER_CHANNEL=chromium npm run test:browser
 ```
@@ -79,4 +82,4 @@ Windows 请先用相应 Shell 语法设置环境变量；本机已安装 Chrome 
 
 如果它帮你收好了那张“差一点就对了”的图，可以 Star 留作下次使用。
 
-MIT © LydiaTools。未捆绑第三方运行时代码；Playwright 仅用于开发测试。[第三方说明](THIRD_PARTY.md)
+MIT © LydiaTools。四个编辑器应用文件不依赖第三方运行库；Playwright 和示例渲染器 Pele 仅用于开发验证，生成的 SVG 示例保留 Pele 许可声明。[第三方说明](THIRD_PARTY.md)
