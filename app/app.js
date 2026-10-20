@@ -718,7 +718,7 @@ function translate() {
       );
     } else node.textContent = text;
   }
-  $("language").textContent = lang === "en" ? "中文" : "English";
+  $("language").textContent = lang === "en" ? "Chinese" : "English";
   if (original) {
     buildList();
     updateSelection();

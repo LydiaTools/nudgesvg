@@ -76,6 +76,7 @@ async function main() {
     }
     await page.goto(origin);
     await page.locator("#elementList button").first().waitFor();
+    assert.equal(await page.locator("#language").textContent(), "Chinese");
     await page.screenshot({
       path: path.join(shots, "desktop-original.png"),
       fullPage: true,
@@ -315,6 +316,7 @@ async function main() {
     );
     await page.locator("#language").click();
     assert.equal(await page.locator("#exportSvg").textContent(), "下载 SVG");
+    assert.equal(await page.locator("#language").textContent(), "English");
     await page.screenshot({
       path: path.join(shots, "desktop-zh.png"),
       fullPage: true,
@@ -324,6 +326,7 @@ async function main() {
     mobile.on("pageerror", (e) => failures.push(e.message));
     await mobile.goto(origin + "/?lang=zh");
     await mobile.locator("#elementList button").first().waitFor();
+    assert.equal(await mobile.locator("#language").textContent(), "English");
     assert.equal(
       await mobile.evaluate(
         () => document.documentElement.scrollWidth > innerWidth,
