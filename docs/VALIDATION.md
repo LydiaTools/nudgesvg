@@ -25,7 +25,7 @@ The test server binds only to loopback and serves four application files. Both i
 
 ## Pele example on current main
 
-`npm run test:pele` rerenders the original garden input using the locked Pele 1.7.0 development dependency and requires exact equality with the committed SVG. The browser suite adds an eleventh workflow group: import that SVG unchanged, move one label by +20/+64, require the complete download to match the committed adjusted file, preserve all data-point attributes, verify one changed range and both hashes, and download a 1200×1200 PNG. The four editor runtime files are unchanged. The extra example is on main; the v0.1.0 release ZIP is not replaced.
+`npm run test:pele` rerenders the original garden input using the locked Pele 1.7.0 development dependency and requires exact equality with the committed SVG. The browser suite adds an eleventh workflow group: import that SVG unchanged, move one label by +20/+64, require the complete download to match the committed adjusted file, preserve all data-point attributes, verify one changed range and both hashes, and download a 1200×1200 PNG. The four editor runtime files are unchanged. The v0.1.1 release ZIP is built from this current main snapshot, including the English language-label fix and the Pele example; the v0.1.0 release remains unchanged.
 
 ## Interpretation and limits
 

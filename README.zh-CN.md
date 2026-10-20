@@ -4,7 +4,7 @@
 
 移动标签、修改几句话，其余 SVG 源码保持原样。
 
-[在线打开](https://lydiatools.github.io/nudgesvg/?lang=zh) · [English](README.md) · [下载离线包](https://github.com/LydiaTools/nudgesvg/releases/tag/v0.1.0)
+[在线打开](https://lydiatools.github.io/nudgesvg/?lang=zh) · [English](README.md) · [下载离线包](https://github.com/LydiaTools/nudgesvg/releases/tag/v0.1.1)
 
 ![真实中文版操作：选中 Review copy、向右移动、对照原图、核对源码改动、下载 SVG](docs/assets/editor-demo-zh.gif)
 
@@ -37,7 +37,7 @@
 
 ## 离线使用
 
-下载并解压 [v0.1.0 ZIP](https://github.com/LydiaTools/nudgesvg/releases/tag/v0.1.0)，保留 `app` 中的四个文件，在 Chrome 打开 **`app/index.html`** 即可。已实际验证这种直接打开方式及 SVG 编辑、下载。
+下载并解压 [v0.1.1 ZIP](https://github.com/LydiaTools/nudgesvg/releases/tag/v0.1.1)，保留 `app` 中的四个文件，在 Chrome 打开 **`app/index.html`** 即可。已实际验证这种直接打开方式及 SVG 编辑、下载。
 
 也可以使用 Node.js 20+：
 
@@ -60,7 +60,7 @@ npm start
 - 文件只保留在当前标签页内存中，没有云端恢复或文档自动保存。关闭前下载；有未导出改动时，打开新文件会询问是否替换。
 - 本机测试为 macOS / Chrome 155，CI 另在 Ubuntu / Chromium 实跑。未宣称其他浏览器和设备都经过测试。精确操作更适合桌面端；窄屏提供缩放和元素列表。
 
-这是 **v0.1.0 早期预览**，不是对完整 SVG 规范的覆盖。工程验证不代表已经有真实采用或效率提升。[验证记录](docs/VALIDATION.md)
+这是 **v0.1.1 早期预览**，不是对完整 SVG 规范的覆盖。工程验证不代表已经有真实采用或效率提升。[验证记录](docs/VALIDATION.md)
 
 ## 与已有工具的关系
 

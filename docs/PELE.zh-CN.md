@@ -37,7 +37,7 @@ node scripts/render-pele-example.mjs
 
 检查步骤使用锁定的 `pele@1.7.0` 渲染 [garden.mmd](../examples/pele/garden.mmd)，与仓库中的原始 SVG 逐字节比较。最后一条命令生成 `artifacts/pele/garden.svg`，已有同名文件时拒绝覆盖；用 `--out another.svg` 可另选输出文件。
 
-编辑器本身不需要安装 npm 包。v0.1.0 ZIP 保持固定源码快照；新增示例与复现脚本在 main 分支获取。
+编辑器本身不需要安装 npm 包。v0.1.1 ZIP 已包含此示例与复现脚本；此前的 v0.1.0 Release 保持不变。
 
 ## 调整的范围
 

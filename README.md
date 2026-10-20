@@ -4,7 +4,7 @@
 
 Move a label. Fix a few words. Keep the rest of your SVG source exactly as it was.
 
-[Open the editor](https://lydiatools.github.io/nudgesvg/) · [中文](README.zh-CN.md) · [Download the offline kit](https://github.com/LydiaTools/nudgesvg/releases/tag/v0.1.0)
+[Open the editor](https://lydiatools.github.io/nudgesvg/) · [Chinese](README.zh-CN.md) · [Download the offline kit](https://github.com/LydiaTools/nudgesvg/releases/tag/v0.1.1)
 
 ![Actual NudgeSVG workflow: select Review copy, move it right, compare the original, inspect the changed source and download SVG](docs/assets/editor-demo-en.gif)
 
@@ -37,7 +37,7 @@ For your own drawing, choose **Open SVG** or paste its markup below the editor. 
 
 ## Run offline
 
-Download the [v0.1.0 ZIP](https://github.com/LydiaTools/nudgesvg/releases/tag/v0.1.0), unzip it, and open **`app/index.html`** in Chrome. The four application files stay together. This direct-file path has been tested, including an actual SVG edit and download.
+Download the [v0.1.1 ZIP](https://github.com/LydiaTools/nudgesvg/releases/tag/v0.1.1), unzip it, and open **`app/index.html`** in Chrome. The four application files stay together. This direct-file path has been tested, including an actual SVG edit and download.
 
 Or, with Node.js 20+:
 
@@ -66,7 +66,7 @@ The tab holds the document in memory. There is no document autosave or cloud rec
 - PNG width: **64–4,096 px**; maximum **16 million pixels**, maximum height 16,384 px. No batch uploads or hidden server conversion.
 - Tested locally with Chrome 155 on macOS; CI separately exercises Chromium on Ubuntu. Other browser/device combinations are not claimed as tested. Desktop is the most comfortable way to make precise edits; the narrow layout includes zoom and element selection.
 
-This is **v0.1.0, an early preview**. We have tested the stated cases, not the entire SVG specification. No real-user adoption or productivity gain is asserted. [Validation details](docs/VALIDATION.md)
+This is **v0.1.1, an early preview**. We have tested the stated cases, not the entire SVG specification. No real-user adoption or productivity gain is asserted. [Validation details](docs/VALIDATION.md)
 
 ## Why this exists alongside SVG editors
 

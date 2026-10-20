@@ -37,7 +37,7 @@ node scripts/render-pele-example.mjs
 
 The check renders [garden.mmd](../examples/pele/garden.mmd) with the locked `pele@1.7.0` dependency and compares bytes with the committed original SVG. The final command writes a fresh `artifacts/pele/garden.svg` and refuses to overwrite an existing file. Use `--out another.svg` to choose another output.
 
-The editor itself needs no package installation. Its current v0.1.0 release ZIP remains a fixed source snapshot; the extra example and reproduction script are on main.
+The editor itself needs no package installation. The v0.1.1 release ZIP includes this example and its reproduction script; the earlier v0.1.0 release remains unchanged.
 
 ## What carries over
 
