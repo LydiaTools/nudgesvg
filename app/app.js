@@ -168,7 +168,6 @@ function tr(key, ...args) {
   const v = messages[lang][key];
   return typeof v === "function" ? v(...args) : v;
 }
-messages.en.heading = "Move a label. <br>Keep the drawing.";
 messages.en.fit = "Fit";
 messages.zh.fit = "适应";
 function error(message) {
