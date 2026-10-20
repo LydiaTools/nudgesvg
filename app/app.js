@@ -23,9 +23,9 @@ const SAMPLE = `<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600"
 </svg>`;
 const messages = {
   en: {
-    heading: "Move a label.<br>Keep the drawing.",
-    intro: "The last little edit shouldn't take another prompt.",
-    local: "Your SVG stays in this tab.<br>No account. No AI call.",
+    heading: "Move a label.<br>Keep the whole drawing.",
+    intro: "One last tweak. No need to prompt AI again.",
+    local: "Your SVG stays in this tab.<br>No account needed. No AI calls.",
     open: "Open SVG",
     practice: "Practice file",
     undo: "Undo",
