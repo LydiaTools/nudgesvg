@@ -317,10 +317,33 @@ async function main() {
     await page.locator("#language").click();
     assert.equal(await page.locator("#exportSvg").textContent(), "下载 SVG");
     assert.equal(await page.locator("#language").textContent(), "English");
+    assert.equal(new URL(page.url()).searchParams.get("lang"), "zh");
+    assert.equal(await page.locator("#filename").textContent(), "nested-中文.svg");
     await page.screenshot({
       path: path.join(shots, "desktop-zh.png"),
       fullPage: true,
     });
+    const shared = await context.newPage();
+    shared.on("pageerror", (e) => failures.push(e.message));
+    await shared.goto(origin + "/?lang=zh&from=example#drawing");
+    await shared.locator("#language").click();
+    let sharedUrl = new URL(shared.url());
+    assert.equal(sharedUrl.searchParams.get("lang"), "en");
+    assert.equal(sharedUrl.searchParams.get("from"), "example");
+    assert.equal(sharedUrl.hash, "#drawing");
+    await shared.reload();
+    assert.equal(await shared.locator("#language").textContent(), "Chinese");
+    await shared.locator("#language").click();
+    await shared.reload();
+    assert.equal(await shared.locator("#language").textContent(), "English");
+    await shared.close();
+    const filePage = await context.newPage();
+    filePage.on("pageerror", (e) => failures.push(e.message));
+    await filePage.goto(require("node:url").pathToFileURL(path.join(root, "app", "index.html")).href);
+    await filePage.locator("#language").click();
+    assert.equal(await filePage.locator("#language").textContent(), "English");
+    await filePage.close();
+    checks.push("Language links survive reload and preserve other query parameters and fragments; file viewer can switch language.");
     const mobile = await context.newPage();
     await mobile.setViewportSize({ width: 390, height: 844 });
     mobile.on("pageerror", (e) => failures.push(e.message));

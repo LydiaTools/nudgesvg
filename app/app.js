@@ -778,6 +778,13 @@ $("exportPng").addEventListener("click", exportPng);
 $("exportChanges").addEventListener("click", exportChanges);
 $("language").addEventListener("click", () => {
   lang = lang === "en" ? "zh" : "en";
+  try {
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", lang);
+    window.history.replaceState(window.history.state, "", url.href);
+  } catch (_) {
+    // Language switching still works when the browser disallows URL changes.
+  }
   translate();
 });
 document.addEventListener("keydown", keys);
