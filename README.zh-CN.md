@@ -4,7 +4,7 @@
 
 移动标签、修改几句话，其余 SVG 源码保持原样。
 
-[在线打开](https://lydiatools.github.io/nudgesvg/?lang=zh) · [English](README.md) · [下载离线包](https://github.com/LydiaTools/nudgesvg/releases/tag/v0.1.1)
+[在线打开](https://lydiatools.github.io/nudgesvg/?lang=zh) · [English](README.md) · [下载离线包](https://github.com/LydiaTools/nudgesvg/releases/tag/v0.1.1) · [反馈问题](https://github.com/LydiaTools/nudgesvg/issues)
 
 ![真实中文版操作：选中 Review copy、向右移动、对照原图、核对源码改动、下载 SVG](docs/assets/editor-demo-zh.gif)
 

@@ -4,7 +4,7 @@
 
 Move a label. Fix a few words. Keep the rest of your SVG source exactly as it was.
 
-[Open the editor](https://lydiatools.github.io/nudgesvg/) · [Chinese](README.zh-CN.md) · [Download the offline kit](https://github.com/LydiaTools/nudgesvg/releases/tag/v0.1.1)
+[Open the editor](https://lydiatools.github.io/nudgesvg/) · [Chinese](README.zh-CN.md) · [Download the offline kit](https://github.com/LydiaTools/nudgesvg/releases/tag/v0.1.1) · [Report a problem](https://github.com/LydiaTools/nudgesvg/issues)
 
 ![Actual NudgeSVG workflow: select Review copy, move it right, compare the original, inspect the changed source and download SVG](docs/assets/editor-demo-en.gif)
 
